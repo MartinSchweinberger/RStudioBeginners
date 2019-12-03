@@ -23,7 +23,7 @@ sum(some_numbers)+y
 
 #Slide 21
 ## install packages
-install.packages("dplyr")
+#install.packages("dplyr")
 
 ## load libraries
 library(dplyr)
@@ -41,7 +41,9 @@ GenderCode <- 2
 dutch_data <- data.frame(Subject, Word, RT, base_frequency, GenderCode)
 
 # Slide 25 - Get some data into R using code
-my_data_csv <- read.csv("heid_mod.csv", header = TRUE)
+my_data_csv <- readxl::read_xlsx("heid_mod.xlsx")
+# str
+str(my_data_csv)
 
 # Slide 30 - Inspect the data
 class(my_data_csv)
