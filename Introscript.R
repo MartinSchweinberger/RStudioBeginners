@@ -59,6 +59,8 @@ levels(my_data_csv$Subject)
 
 class(my_data_csv$RT)
 
+# rename data frame
+my_data_import <- my_data_csv
 # Slide 32 - Combining data - rbind
 rbind(my_data_import, dutch_data)
 
@@ -69,6 +71,7 @@ colnames(dutch_data)
 #Slide 33 - Combining data - rbind
 #Detour: renaming columns
 names(dutch_data)[names(dutch_data) == "base_frequency"] <- "BaseFrequency"
+my_data_import[,1] <- NULL
 
 ##Get column names (just to double check!)
 colnames(my_data_import)
